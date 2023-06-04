@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://ka7de.github.io/videoLPsample/style.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="jquery.inview.min.js"></script>
+    <script src="main.js"></script>
     <title>動画編集講座 | サークルA</title>
 </head>
 <body>
@@ -20,31 +22,31 @@
             <div id="header-nav">
                 <ul class="header-nav-list">
                     <li class="header-nav-item">
-                        <a href="#index.html">
+                        <a href="#">
                             <span class="header-nav-item-en">HOME</span>
                             <span class="header-nav-item-ja">トップ</span>
                         </a>
                     </li>
                     <li class="header-nav-item">
-                        <a href="#index.html">
+                        <a href="#feature">
                             <span class="header-nav-item-en">FEATURE</span>
                             <span class="header-nav-item-ja">本講座ついて</span>
                         </a>
                     </li>
                     <li class="header-nav-item">
-                        <a href="#index.html">
+                        <a href="#support">
                             <span class="header-nav-item-en">SUPPORT</span>
                             <span class="header-nav-item-ja">サポート</span>
                         </a>
                     </li>
                     <li class="header-nav-item">
-                        <a href="#index.html">
+                        <a href="#price">
                             <span class="header-nav-item-en">PRICE</span>
                             <span class="header-nav-item-ja">料金</span>
                         </a>
                     </li>
                     <li class="header-nav-item">
-                        <a href="#index.html">
+                        <a href="#faq">
                             <span class="header-nav-item-en">FAQ</span>
                             <span class="header-nav-item-ja">よくある質問</span>
                         </a>
@@ -59,6 +61,7 @@
             </div>
         </div>
     </header>
+
     <main id="main">
         <section class="top">
             <div class="background-img">
@@ -87,8 +90,8 @@
         </section>
 
         <section id="first-catch">
-            <p>動画編集に興味はあるんだけど・・・</p>
-            <h2>始める前にこんな <strong>悩み・疑問</strong> 持ってませんか？</h2>
+            <p class="fadeOut">動画編集に興味はあるんだけど・・・</p>
+            <h2 class="fadeOut">始める前にこんな <strong>悩み・疑問</strong> 持ってませんか？</h2>
         </section>
 
         <section id="second-catch">
@@ -141,15 +144,15 @@
         <section id="third-catch">
             <div class="third-catch-title">
                 <p class="third-catch-title-top">⚪︎⚪︎⚪︎ならそんな悩みも解決</p>
-                <h2>動画編集の学習、実はそんなに難しくないんです！</h2>
+                <h2 class="shine">動画編集の学習、実はそんなに難しくないんです！</h2>
                 <p class="third-catch-title-bottom">⚪︎⚪︎⚪︎で動画編集始めませんか？</p>
             </div>
         </section>
 
         <section id="aboutus">
-            <h3 class="sec-title">
+            <h3 class="sec-title fadeOut">
                 ABOUT US
-                <span class="sub-title">⚪︎⚪︎⚪︎について</span>
+                <span class="sub-title fadeOut">⚪︎⚪︎⚪︎について</span>
             </h3>
             <div class="about-main">
                 <h4 class="about-main-title">
@@ -185,9 +188,9 @@
         </section>
 
         <section id="feature">
-            <h3 class="sec-title">
+            <h3 class="sec-title fadeOut">
                 FEATURE
-                <span class="sub-title">⚪︎⚪︎⚪︎の特徴</span>
+                <span class="sub-title fadeOut">⚪︎⚪︎⚪︎の特徴</span>
             </h3>
             <div class="feature-contents">
                 <h4 class="feature-contents-title">カリキュラムテキストテキストテキスト</h4>
@@ -196,7 +199,7 @@
                         <div class="curriculum-img">
                             <img src="https://images.unsplash.com/photo-1589897657344-733d6b13596d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fCVFMyU4MyU5MSVFMyU4MiVCRCVFMyU4MiVCMyVFMyU4MyVCMyUyMCVFNSU4QiU5NSVFNyU5NCVCQiVFNyVCNyVBOCVFOSU5QiU4NnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="">
                         </div>
-                        <div class="curriculum-desc">
+                        <div class="curriculum-desc curriculum-desc-odd">
                             <div class="curriculum-desc-flex">
                                 <div class="curriculum-desc-num-box">
                                     <h5 class="curriculum-desc-num">1</h5>
@@ -209,7 +212,7 @@
                         </div>
                     </li>
                     <li class="feature-contents-curriculum-item">
-                        <div class="curriculum-desc">
+                        <div class="curriculum-desc curriculum-desc-even">
                             <div class="curriculum-desc-flex">
                                 <div class="curriculum-desc-num-box">
                                     <h5 class="curriculum-desc-num">2</h5>
@@ -228,7 +231,7 @@
                         <div class="curriculum-img">
                             <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YWRvYmV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60" alt="">
                         </div>
-                        <div class="curriculum-desc">
+                        <div class="curriculum-desc curriculum-desc-odd">
                             <div class="curriculum-desc-flex">
                                 <div class="curriculum-desc-num-box">
                                     <h5 class="curriculum-desc-num">3</h5>
@@ -248,9 +251,9 @@
         </section>
 
         <section id="support">
-            <h3 class="sec-title">
+            <h3 class="sec-title fadeOut">
                 SUPPORT
-                <span class="sub-title">⚪︎⚪︎⚪︎のサポート体制</span>
+                <span class="sub-title fadeOut">⚪︎⚪︎⚪︎のサポート体制</span>
             </h3>
             <div class="support-contents">
                 <h4 class="feature-contents-title">サポート体制テキストテキストテキスト</h4>
@@ -259,7 +262,7 @@
                     <h2 id="feature-contents-title-h2">学習中、時には<strong>分からず躓く</strong>ことも・・・</h2>
                     <p class="third-catch-title-bottom">そんなあなたをサポートします！</p>
                 </div>
-                <h4 class="support-contents-h4">あなたの動画編集学習を私たちが徹底サポート！</h4>
+                <h4 class="support-contents-h4 shine">あなたの動画編集学習を私たちが徹底サポート！</h4>
                 <ul class="support-contents-list">
                     <li class="support-contents-item">
                         <div class="support-contents-item-text">
@@ -310,11 +313,11 @@
         </section>
 
         <section id="price">
-            <h3 class="sec-title">
+            <h3 class="sec-title fadeOut">
                 PRICE
-                <span class="sub-title">本講座の料金について</span>
+                <span class="sub-title fadeOut">本講座の料金について</span>
             </h3>
-            <div class="price-item">
+            <div class="price-item fadeOut">
                 <p class="price-desc">料金詳細は無料相談にてご確認ください</p>
                 <div class="price-detail">
                     <p class="price-num">⚪︎⚪︎,⚪︎⚪︎⚪︎</p>
@@ -343,50 +346,41 @@
             </div>
         </section>
 
-        <section class="faq">
+        <section class="faq" id="faq">
             <h3 class="sec-title">
                 FAQ
                 <span class="sub-title">よくある質問</span>
             </h3>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <input type="checkbox" class="faq-check" id="faq-check1">
-                    <label for="faq-check1" class="faq-label">
-                        テキストテキストテキストテキストテキスト
-                    </label>
-                    <p class="faq-contents">
-                        テキストテキストテキストテキストテキストテキストテキスト
-                    </p>
-                </div>
-                <div class="faq-item">
-                    <input type="checkbox" class="faq-check" id="faq-check2">
-                    <label for="faq-check2" class="faq-label">
-                        テキストテキストテキストテキストテキスト
-                    </label>
-                    <p class="faq-contents">
-                        テキストテキストテキストテキストテキストテキストテキスト
-                    </p>
-                </div>
-                <div class="faq-item">
-                    <input type="checkbox" class="faq-check" id="faq-check3">
-                    <label for="faq-check3" class="faq-label">
-                        テキストテキストテキストテキストテキスト
-                    </label>
-                    <p class="faq-contents">
-                        テキストテキストテキストテキストテキストテキストテキスト
-                    </p>
-                </div>
-            </div>
+            <ul class="accordion-area">
+                <li class="accordion-item">
+                    <h4 class="accordion-title">faqテキスト</h4>
+                    <div class="accordion-desc">
+                        <p>内容テキストテキスト</p>
+                    </div>
+                </li>
+                <li class="accordion-item">
+                    <h4 class="accordion-title">faqテキスト</h4>
+                    <div class="accordion-desc">
+                        <p>内容テキストテキスト</p>
+                    </div>
+                </li>
+                <li class="accordion-item">
+                    <h4 class="accordion-title">faqテキスト</h4>
+                    <div class="accordion-desc">
+                        <p>内容テキストテキスト</p>
+                    </div>
+                </li>
+            </ul>
         </section>
     </main>
     <footer id="footer">
         <div class="footer-contents">
             <ul class="footer-link-list">
-                <li class="footer-link-item"><a href="">トップ</a></li>
-                <li class="footer-link-item"><a href="">本講座について</a></li>
-                <li class="footer-link-item"><a href="">サポート</a></li>
-                <li class="footer-link-item"><a href="">料金</a></li>
-                <li class="footer-link-item"><a href="">よくある質問</a></li>
+                <li class="footer-link-item"><a href="#">トップ</a></li>
+                <li class="footer-link-item"><a href="#feature">本講座について</a></li>
+                <li class="footer-link-item"><a href="#support">サポート</a></li>
+                <li class="footer-link-item"><a href="#price">料金</a></li>
+                <li class="footer-link-item"><a href="#faq">よくある質問</a></li>
             </ul>
         </div>
         <div class="footer-inner-btn">
