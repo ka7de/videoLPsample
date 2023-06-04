@@ -36,6 +36,17 @@ body{
     border-right:2px solid #e83434;
 }
 
+.fadeOut{
+    opacity:0;
+    transform:translateY(40%);
+    transition:1s;
+}
+
+.fadeIn{
+    opacity:1;
+    transform:translateY(0);
+}
+
 /* header */
 #header{
     width:100%;
@@ -299,6 +310,22 @@ body{
     display:flex;
     align-items:center;
     margin-bottom:60px;
+    opacity:0;
+}
+
+.catch-flex-odd.show1{
+    animation:scaleUp 0.5s ease-out 0s 1 forwards;
+}
+
+@keyframes scaleUp{
+    0%{
+        transform:scale(0);
+        opacity:0;
+    }
+    100%{
+        transform:scale(1);
+        opacity:1;
+    }
 }
 
 .catch-flex-even{
@@ -306,6 +333,11 @@ body{
     justify-content:flex-end;
     align-items:center;
     margin-bottom:60px;
+    opacity:0;
+}
+
+.catch-flex-even.show1{
+    animation:scaleUp 0.5s ease-out 0s 1 forwards;
 }
 
 .catch-flex-img{
@@ -412,11 +444,35 @@ body{
 }
 
 .third-catch-title h2{
-    display:inline;
     font-size:2rem;
     color:#e83434;
     border-bottom:3px double #e83434;
     padding-bottom:5px;
+}
+
+.shine{
+    display:inline-block;
+    position:relative;
+    outline:none;
+    overflow:hidden;
+}
+
+.shine::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-75%;
+    width:50%;
+    height:100%;
+    background:linear-gradient(to right,rgba(255,255,255,0)0%,rgba(255,255,255,.5)100%);
+    transform:skewX(-25deg);
+    animation:shine 2s infinite;
+}
+
+@keyframes shine{
+    100%{
+        left:125%;
+    }
 }
 
 /* aboutus */
@@ -543,6 +599,11 @@ body{
     width:30%;
     background:#fff;
     border-radius:10px;
+
+}
+
+.feature-contents-study-item.show1{
+    animation:scaleUp 0.5s ease-out 0s 1 forwards;
 }
 
 .feature-contents-study-item img{
@@ -593,6 +654,35 @@ body{
     text-align:left;
     padding:20px;
     box-sizing:border-box;
+    opacity:0;
+}
+
+.curriculum-desc-odd.show2{
+    animation:slideRight 0.5s ease-out 0s 1 forwards;
+}
+
+@keyframes slideRight {
+    0%{
+        transform:translateX(100%);
+    }
+    100%{
+        transform:translateX(0%);
+        opacity:1;
+    }
+}
+
+.curriculum-desc-even.show2{
+    animation:slideLeft 0.5s ease-out 0s 1 forwards;
+}
+
+@keyframes slideLeft{
+    0%{
+        transform:translateX(-50%);
+    }
+    100%{
+        transform:translateX(0%);
+        opacity:1;
+    }
 }
 
 .curriculum-desc-flex{
@@ -716,6 +806,11 @@ body{
 .support-contents-item{
     width:48%;
     box-shadow:0 0 8px 4px #ccc;
+    opacity:0;
+}
+
+.support-contents-item.show1{
+    animation:scaleUp 0.5s ease-out 0s 1 forwards;
 }
 
 .support-contents-item:first-child{
@@ -811,6 +906,14 @@ body{
     margin-bottom:50px;
 }
 
+.price-back{
+    opacity:0;
+}
+
+.price-back.show1{
+    animation:scaleUp 0.5s ease-out 0s 1 forwards;
+}
+
 .price-back-voice{
     background:#000;
     color:#fff;
@@ -896,35 +999,31 @@ body{
 }
 
 /* faq */
-.faq-list{
+.accordion-area{
     max-width:960px;
     width:100%;
     margin:60px auto 120px;
 }
 
-.faq-item{
+.accordion-item{
     display:block;
     width:100%;
     border-bottom:1px solid #ddd;
     position:relative;
 }
 
-.faq-check{
-    position:relative;
-    width:0;
-    height:0; 
-} 
 
-.faq-check::before{
+
+.accordion-item::before{
     content:"Q";
-    font-size:2rem;
+    font-size:1.5rem;
     color:#e83434;
     position:absolute;
     top:9px;
-    left:0;
+    left:10px;
 }
 
-.faq-label{
+.accordion-title{
     display:block;
     color:#333;
     margin-bottom:1px;
@@ -932,9 +1031,11 @@ body{
     font-size:1.125rem;
     letter-spacing:0.04em;
     position:relative;
+    transition:all .5s ease;
+    cursor:pointer;
 }
 
-.faq-label::before{
+.accordion-title::before{
     content:"";
     width:20px;
     height:2px;
@@ -944,7 +1045,7 @@ body{
     right:1%;
 }
 
-.faq-label::after{
+.accordion-title::after{
     content:"";
     content:"";
     width:20px;
@@ -953,11 +1054,17 @@ body{
     position:absolute;
     top:20px;
     right:1%;
-    transform:translateY(-40%) rotate(90deg);
+    transform:rotate(90deg);
+    transition:all .5s ease;
 }
 
-.faq-contents{
+.accordion-title.close::after{
+    transform:rotate(0deg);
+}
+
+.accordion-desc{
     display:none;
+    padding:10px 0 15px 40px;
 }
 
 /* footer */
@@ -1049,4 +1156,5 @@ body{
 
 .copy-right{
     font-size:0.875rem;
+    padding:10px 0;
 }
