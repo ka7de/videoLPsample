@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://ka7de.github.io/videoLPsample/style.css"/>
+    <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="jquery.inview.min.js"></script>
     <script src="main.js"></script>
@@ -18,7 +18,7 @@
                     logo
                 </a>
             </h1>
-            <div id="header-nav">
+            <div id="header-nav" class="visible-pc">
                 <ul class="header-nav-list">
                     <li class="header-nav-item">
                         <a href="#">
@@ -52,11 +52,42 @@
                     </li>
                 </ul>
             </div>
-            <div id="header-form">
+            <div id="header-form  visible-pc">
                 <a href="" class="header-form-link">
                     <span class="header-form-link-time">短時間で完了</span>
                     <span class="header-form-link-contact">気軽に質問はこちら</span>
                 </a>
+            </div>
+        </div>
+        <div class="hamburger visible-ipad">
+            <div id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div id="slide-menu">
+                <nav id="hamburger-nav">
+                    <ul id="hamburger-nav-list">
+                        <li class="hamburger-nav-item">
+                            <a href="#">トップ</a>
+                        </li>
+                        <li class="hamburger-nav-item">
+                            <a href="#feature">本講座について</a>
+                        </li>
+                        <li class="hamburger-nav-item">
+                            <a href="#support">サポート</a>
+                        </li>
+                        <li class="hamburger-nav-item">
+                            <a href="#price">料金</a>
+                        </li>
+                        <li class="hamburger-nav-item">
+                            <a href="#faq">FAQ</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div id="hamburger-btn">
+                    <a href="">今すぐ無料相談</a>
+                </div>
             </div>
         </div>
     </header>
@@ -210,7 +241,7 @@
                             <p>テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                         </div>
                     </li>
-                    <li class="feature-contents-curriculum-item">
+                    <li class="feature-contents-curriculum-item" id="curriculum-item-2">
                         <div class="curriculum-desc curriculum-desc-even">
                             <div class="curriculum-desc-flex">
                                 <div class="curriculum-desc-num-box">
