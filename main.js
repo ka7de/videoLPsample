@@ -62,3 +62,21 @@ $(function (){
         }
     });
 });
+
+// ハンバーガーメニュー
+$(function(){
+    $('#hamburger').click(function(){
+        $(this).toggleClass('active');
+        $('#slide-menu').toggleClass('active');
+    });
+
+    $('.hamburger-nav-item a').click(function(){
+        $('#hamburger').removeClass('active');
+        $('#slide-menu').removeClass('active');
+    });
+
+    $('#hamburger-btn').click(function(){
+        $('#hamburger').removeClass('active');
+        $('.slide-menu').removeClass('active');
+    });
+});
